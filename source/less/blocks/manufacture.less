@@ -1,0 +1,140 @@
+.manufacture {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 95px 0 35px;
+  box-sizing: border-box;
+  border: 1px solid @whisper;
+
+  &__video {
+    position: relative;
+    height: 150px;
+    margin: 0 auto 30px;
+    font-size: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    &:active {
+      transform: translate(-50%, -50%) scale(0.8);
+      opacity: 0.3;
+    }
+  }
+
+  &__info {
+    padding: 0 34px;
+  }
+
+  &__title {
+    position: absolute;
+    padding-left: 90px;
+    top: 22px;
+    left: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 33px;
+      width: 32px;
+      height: 32px;
+      background-image: url("../img/icon-video.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  &__btn {
+    padding: 14px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .manufacture {
+    padding: 0 0 45px;
+    margin-bottom: 64px;
+
+    &__video {
+      height: 455px;
+      margin-bottom: 35px;
+    }
+
+    &__title {
+      position: relative;
+      padding-left: 65px;
+      top: 0;
+      margin-bottom: 35px;
+
+      &::before {
+        top: -5px;
+        left: 0;
+      }
+    }
+
+    &__info {
+      padding: 0 40px;
+    }
+
+    &__text {
+      font-size: 15px;
+      line-height: 30px;
+      margin-bottom: 35px;
+    }
+
+    &__btn {
+      max-width: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .manufacture {
+    display: flex;
+    padding-bottom: 0;
+    margin-bottom: 105px;
+
+    &__video {
+      margin: 0;
+    }
+
+    &__info {
+      width: 350px;
+      box-sizing: border-box;
+      padding: 95px 60px 0;
+      margin-left: auto;
+    }
+
+    &__title {
+      padding: 0;
+
+      &::before {
+        top: -53px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 45px;
+    }
+  }
+}

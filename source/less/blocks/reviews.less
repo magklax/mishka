@@ -1,0 +1,155 @@
+.reviews {
+  &__wrapper {
+    padding: 30px 0 50px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  &__author-name {
+    display: block;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+    color: @black;
+    margin-bottom: 35px;
+  }
+
+  &__author-id {
+    display: block;
+    line-height: 30px;
+    font-weight: 400;
+    color: @grey;
+  }
+
+  &__nav {
+    margin-bottom: 35px;
+    font-size: 0;
+  }
+
+  &__prev,
+  &__next {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 52px;
+    padding: 0;
+    margin: 0;
+    background-color: @white;
+    border: 1px solid @whisper;
+    cursor: pointer;
+    vertical-align: top;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 27px;
+      background-repeat: no-repeat;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 0.6;
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
+
+  &__prev::before {
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &__next::before {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 30px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 110px 0 100px;
+      align-content: center;
+    }
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      order: 2;
+    }
+
+    &__text {
+      margin-bottom: 55px;
+      font-size: 17px;
+      flex-grow: 1;
+    }
+
+    &__author-name {
+      flex-basis: 50%;
+      font-size: 18px;
+    }
+
+    &__nav {
+      flex-basis: 175px;
+      margin-left: auto;
+    }
+
+    &__prev,
+    &__next {
+      border: none;
+    }
+
+    &__btn {
+      margin-right: 0;
+      margin-bottom: 50px;
+      flex-basis: 175px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    background-position: calc((100% - 1050px) / 2 + 175px) center;
+
+    &__wrapper {
+      padding: 160px 0;
+      padding-left: 175px;
+    }
+
+    &__text {
+      padding-right: 100px;
+      margin-bottom: 40px;
+    }
+
+    &__btn {
+      margin-top: 10px;
+    }
+  }
+}

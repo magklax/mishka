@@ -1,0 +1,158 @@
+.best-product {
+  padding: 27px 0 40px;
+  box-sizing: border-box;
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__index {
+    line-height: 24px;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__table {
+    width: 100%;
+    margin-bottom: 28px;
+    border-collapse: collapse;
+  }
+
+  &__table tr {
+    border-bottom: 1px solid rgba(@grey, 0.1);
+  }
+
+  &__table td {
+    padding: 8px 0;
+  }
+
+  &__table td:first-child {
+    width: 97px;
+  }
+
+  &__pic {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 28px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .best-product {
+    padding: 45px 0 65px;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+
+    &__title {
+      width: 100%;
+    }
+
+    &__subtitle {
+      width: 155px;
+      display: block;
+      margin-right: 0;
+      padding-top: 5px;
+      text-align: center;
+    }
+
+    &__index {
+      display: flex;
+      position: relative;
+    }
+
+    &__wrapper {
+      width: 50%;
+      box-sizing: border-box;
+      padding-right: 6.74%;
+      flex-grow: 1;
+    }
+
+    &__text {
+      font-size: 17px;
+      line-height: 30px;
+      margin: -10px 0 35px;
+    }
+
+    &__pic {
+      width: 50%;
+      margin: 0;
+      flex-grow: 1;
+      line-height: 0;
+      text-align: right;
+    }
+
+    &__wrapper--price {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__price {
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+
+    &__btn {
+      max-width: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .best-product {
+    padding: 122px 0 95px;
+
+    &__header {
+      width: 100%;
+    }
+
+    &__title {
+      order: 1;
+      width: 875px;
+      z-index: 100;
+    }
+
+    &__subtitle {
+      width: 175px;
+      box-sizing: border-box;
+      padding: 8px 30px 0;
+    }
+
+    &__wrapper {
+      padding-left: 175px;
+      padding-right: 55px;
+    }
+
+    &__text {
+      margin-bottom: 47px;
+    }
+
+    &__pic {
+      margin-top: -168px;
+    }
+
+    &__price {
+      margin-bottom: 33px;
+    }
+  }
+}
